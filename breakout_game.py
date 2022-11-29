@@ -1,5 +1,4 @@
 # Simple pygame program
-# peggle-genre? --> Atari Breakout!
 
 # Import and initialize the pygame library
 import random
