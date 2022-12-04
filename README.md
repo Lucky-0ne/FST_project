@@ -6,6 +6,7 @@ required packages:
 
 ## 1. Git
 Used Git for synchronizing project related files between my home PC and Uni Laptop.
+
 (and because it was mandatory for the final submission of the "Fortgeschrittene Softwaretechnik" (FST) course)
 
 ## 2. UML 
