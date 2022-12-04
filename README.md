@@ -5,10 +5,16 @@ required packages:
 `pip install -r requirements.txt`
 
 ## 1. Git
-TBD
+Used Git for synchronizing project related files between my home PC and Uni Laptop.
+
+(and because it was mandatory for the final submission of the "Fortgeschrittene Softwaretechnik" (FST) course)
 
 ## 2. UML 
-TBD
+There were three UML diagramms created for this project. Each of them shall be able to be pumped up artificially as intended in the Domain-Driven Design (DDD).
+
+- UML 1
+- UML 2
+- UML 3
 
 ## 3. DDD
 TBD
