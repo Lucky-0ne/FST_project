@@ -14,7 +14,7 @@ There were three UML diagramms created for this project. Each of them shall be a
 
 - [activity diagramm](https://github.com/Lucky-0ne/FST_project/blob/main/images/uml/Activity_Diagramm.png)
 - [use case diagramm](https://github.com/Lucky-0ne/FST_project/blob/main/images/uml/Use_Case_Diagramm.png)
-- UML 3
+- [component diagramm](https://github.com/Lucky-0ne/FST_project/blob/main/images/uml/Component_Diagramm.png)
 
 ## 3. DDD
 TBD
