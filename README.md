@@ -12,8 +12,8 @@ Used Git for synchronizing project related files between my home PC and Uni Lapt
 ## 2. UML 
 There were three UML diagramms created for this project. Each of them shall be able to be pumped up artificially as intended in the Domain-Driven Design (DDD).
 
-- [activity diagramm](https://github.com/Lucky-0ne/FST_project/blob/main/images/uml/Activity_Diagramm.png) the yellow boxes are planned for the Edlich-Investment
-- UML 2
+- [activity diagramm](https://github.com/Lucky-0ne/FST_project/blob/main/images/uml/Activity_Diagramm.png)
+- [use case diagramm](https://github.com/Lucky-0ne/FST_project/blob/main/images/uml/Use_Case_Diagramm.png)
 - UML 3
 
 ## 3. DDD
