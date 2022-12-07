@@ -1,5 +1,5 @@
 # FST_project
-an alternate Atari Breakout game
+This is a project for the "Fortgeschrittene Softwaretechnik" course. An alternate Atari Breakout video game.
 
 required packages:
 `pip install -r requirements.txt`
