@@ -17,7 +17,7 @@ There were three UML diagramms created for this project. Each of them shall be a
 - [component diagramm](https://github.com/Lucky-0ne/FST_project/blob/main/images/uml/Component_Diagramm.png)
 
 ## 3. DDD
-&rarr; [Event-Storming and Core Domain Chart](https://github.com/Lucky-0ne/FST_project/blob/main/images/ddd/event_storming_ddd.png)
+&rarr; [Event-Storming and Core Domain Chart](https://github.com/Lucky-0ne/FST_project/blob/main/images/ddd/event_storming_ddd.jpg)
 
 ## 4. Metrics
 TBD
