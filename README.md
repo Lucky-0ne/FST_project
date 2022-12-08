@@ -52,10 +52,10 @@ I use **Visual Studio Code** as my IDE. It was the first IDE I got introduced to
 
 #### *regular shortcuts*:
 
-- ```shift + enter```       --> run line in interactive window (has to be enabled in settings)
-- ```f3``` or ```strg + f```   --> search in code + option to replace by text
-- ```strg + z```            --> undo
-- ```strg + y```            --> redo
+- ```shift + enter```       &arr; run line in interactive window (has to be enabled in settings first)
+- ```f3``` or ```strg + f```   &arr; search in code + option to replace by text
+- ```strg + z```            &arr; undo
+- ```strg + y```            &arr; redo
 
 ## 10. DSL
 TBD
