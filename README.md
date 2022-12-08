@@ -43,7 +43,18 @@ TBD
 TBD
 
 ## 9. IDE
-TBD
+
+I use **Visual Studio Code** as my IDE. It was the first IDE I got introduced to and since then there was never a big enough reason to switch to another IDE. I like the look and feel to it and especially it's easy to use interactive window. Plus it has a lot of useful preinstalled features and installing new ones isn't that hard either. Debugging is easy too!
+
+#### *personal shortcuts*:
+
+- '''numpad /''' --> open new interactive window
+
+#### *regular shortcuts*:
+
+- '''shift + enter'''   --> run line in interactive window
+- '''strg + f OR f3'''  --> search in code + option to replace by text
+- '''strg + z OR y'''   --> undo/redo
 
 ## 10. DSL
 TBD
