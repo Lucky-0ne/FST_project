@@ -48,13 +48,13 @@ I use **Visual Studio Code** as my IDE. It was the first IDE I got introduced to
 
 #### *personal shortcuts*:
 
-- '''numpad /''' --> open new interactive window
+- ```numpad /``` --> open new interactive window
 
 #### *regular shortcuts*:
 
-- '''shift + enter'''   --> run line in interactive window
-- '''strg + f OR f3'''  --> search in code + option to replace by text
-- '''strg + z OR y'''   --> undo/redo
+- ```shift + enter```   --> run line in interactive window (has to be enabled in settings)
+- ```strg + f OR f3```  --> search in code + option to replace by text
+- ```strg + z OR y```   --> undo/redo
 
 ## 10. DSL
 TBD
