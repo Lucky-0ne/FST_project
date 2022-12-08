@@ -20,7 +20,15 @@ There were three UML diagramms created for this project. Each of them shall be a
 &rarr; [Event-Storming and Core Domain Chart](https://github.com/Lucky-0ne/FST_project/blob/main/images/ddd/event_storming_ddd.jpg)
 
 ## 4. Metrics
-TBD
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Lucky-0ne_FST_project&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=Lucky-0ne_FST_project)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Lucky-0ne_FST_project&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Lucky-0ne_FST_project)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Lucky-0ne_FST_project&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=Lucky-0ne_FST_project)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Lucky-0ne_FST_project&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Lucky-0ne_FST_project)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Lucky-0ne_FST_project&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=Lucky-0ne_FST_project)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Lucky-0ne_FST_project&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=Lucky-0ne_FST_project)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Lucky-0ne_FST_project&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=Lucky-0ne_FST_project)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=Lucky-0ne_FST_project&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=Lucky-0ne_FST_project)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Lucky-0ne_FST_project&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=Lucky-0ne_FST_project)
 
 ## 5. Clean Code Development
 TBD
