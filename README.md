@@ -1,5 +1,5 @@
 # FST_project
-This is a project for the "Fortgeschrittene Softwaretechnik" course. An alternate Atari Breakout video game.
+This is a project for the "Fortgeschrittene Softwaretechnik" (FS or FST) course. An alternate Atari Breakout video game.
 
 required packages:
 `pip install -r requirements.txt`
@@ -7,7 +7,7 @@ required packages:
 ## 1. Git
 Used Git for synchronizing project related files between my home PC and Uni Laptop.
 
-(and because it was mandatory for the final submission of the "Fortgeschrittene Softwaretechnik" (FST) course)
+(and because it was mandatory for the final submission of the "Fortgeschrittene Softwaretechnik" course)
 
 ## 2. UML 
 There were three UML diagramms created for this project. Each of them shall be able to be pumped up artificially as intended in the Domain-Driven Design (DDD).
