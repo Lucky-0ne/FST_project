@@ -52,11 +52,13 @@ I use **Visual Studio Code** as my IDE. It was the first IDE I got introduced to
 
 #### *regular shortcuts*:
 
-- ```alt + left mouse button```    &rarr; multi cursor selection
-- ```shift + enter```       &rarr; run line in interactive window (has to be enabled in settings first)
-- ```f3``` or ```strg + f```   &rarr; search in code + option to replace by text
-- ```strg + z```            &rarr; undo
-- ```strg + y```            &rarr; redo
+- ```shift + enter```               &rarr; run line in interactive window (has to be enabled in settings first)
+- ```alt + left mouse button```     &rarr; multi cursor selection
+- ```shift + alt + up/down```       &rarr; duplicate line or block of code
+- ```alt + up/down```               &rarr; move line or block of code up and down
+- ```f3``` or ```strg + f```        &rarr; search in code + option to replace by text
+- ```strg + z```                    &rarr; undo
+- ```strg + y```                    &rarr; redo
 
 ## 10. DSL
 TBD
