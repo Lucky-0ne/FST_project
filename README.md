@@ -48,7 +48,7 @@ I use **Visual Studio Code** as my IDE. It was the first IDE I got introduced to
 
 #### *personal shortcuts*:
 
-- ```numpad /``` --> open new interactive window
+- ```numpad /``` &rarr; open new interactive window
 
 #### *regular shortcuts*:
 
