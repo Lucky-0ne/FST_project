@@ -1,40 +1,43 @@
+# import dependencies
 from imports.brickbreaker_init import *
 
+# class for blocks (used for the bricks in game)
 class block:
-    def __init__(self, height, width, posX, posY, colour):
+    def __init__(self, height, width, pos_x, pos_y, colour):
         self.height = height
         self.width = width
-        self.posX = posX
-        self.posY = posY
+        self.pos_x = pos_x
+        self.pos_y = pos_y
         self.colour = colour
     
     def draws(self):
-        pygame.draw.rect(screen, self.colour, ((self.posX, self.posY), (self.width, self.height)))
+        pygame.draw.rect(screen, self.colour, ((self.pos_x, self.pos_y), (self.width, self.height)))
 
     def move(self, speed):
-        self.posX += speed
+        self.pos_x += speed
 
+# class for projectiles (currently just one)
 class projectile:
-    def __init__(self, posX, posY, radius, colour, speedX, speedY):
-        self.posX = posX
-        self.posY = posY
+    def __init__(self, pos_x, pos_y, radius, colour, speed_x, speed_y):
+        self.pos_x = pos_x
+        self.pos_y = pos_y
         self.radius = radius
         self.colour = colour
-        self.speedX = speedX
-        self.speedY = speedY
+        self.speed_x = speed_x
+        self.speed_y = speed_y
 
     def bewegen(self):
-        if self.posX < 12:
-            self.speedX *= -1
-        elif self.posX > WN_WIDTH - 12:
-            self.speedX *= -1
-        self.posX = self.posX + self.speedX
+        if self.pos_x < 12:
+            self.speed_x *= -1
+        elif self.pos_x > WN_WIDTH - 12:
+            self.speed_x *= -1
+        self.pos_x = self.pos_x + self.speed_x
 
-        if self.posY < 12:
-            self.speedY *= -1
-        elif self.posY > WN_HEIGHT - 12:
-            self.speedY *= -1
-        self.posY = self.posY + self.speedY
+        if self.pos_y < 12:
+            self.speed_y *= -1
+        elif self.pos_y > WN_HEIGHT - 12:
+            self.speed_y *= -1
+        self.pos_y = self.pos_y + self.speed_y
 
     def draws(self):
-        pygame.draw.circle(screen, self.colour, (self.posX, self.posY), self.radius, 0)
+        pygame.draw.circle(screen, self.colour, (self.pos_x, self.pos_y), self.radius, 0)

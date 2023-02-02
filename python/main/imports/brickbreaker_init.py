@@ -1,13 +1,17 @@
 # Import and initialize the pygame library
 import pygame
+pygame.init()
 
+# initialize constants
 WN_HEIGHT = 600
 WN_WIDTH = 800
-inline_x = 8
-gm_pause = True
+INLINE_X = 8
+PADDLE_WIDTH = 60
+BRICK_ROWS = 7
 
+# initialize variables
+gm_pause = True
 clock = pygame.time.Clock()
 
-# Set up the drawing window
-pygame.init()
+# set up the drawing window
 screen = pygame.display.set_mode((WN_WIDTH, WN_HEIGHT))

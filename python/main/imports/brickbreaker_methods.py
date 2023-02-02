@@ -1,49 +1,63 @@
+# import dependencies and the random module (for random block position with each restart)
 from imports.brickbreaker_objects import *
 import random
 
-def create_blocks(posY):
-    gap = 10
-    max_width = 90
+# method for calculating a random brick-position with varying brick sizes for each game start
+def create_blocks(pos_y):
+    '''
+    Calculates a random brick-position with varying brick sizes for each game start.
+
+    input:
+        pos_y [int] --> vertical starting position of the brick row
+        
+    output:
+        blocks [list of objects] --> list contains each generated brick-object (block)
+    '''
+
+    GAP = 10
+    MAX_WIDTH = 90
+    RANGE_X = WN_WIDTH - 200
     block_widths=[]
-    range_x = WN_WIDTH - 200
-    while range_x > (max_width + 2 * gap):
-        a1 = random.randrange(30, max_width, 10)
-        range_x -= a1
+    while RANGE_X > (MAX_WIDTH + 2 * GAP):
+        a1 = random.randrange(30, MAX_WIDTH, 10)
+        RANGE_X -= a1
         block_widths.append(a1)
-    block_widths += [range_x]
-    block_widths += [WN_WIDTH - (2 * inline_x) - sum(block_widths) - ((len(block_widths) + 2) * gap)]
+    block_widths += [RANGE_X]
+    block_widths += [WN_WIDTH - (2 * INLINE_X) - sum(block_widths) - ((len(block_widths) + 2) * GAP)]
 
     blocks = []
-    for i, block_width in enumerate(block_widths):
-        blocki = block(20, block_width, gap + inline_x + sum(block_widths[:i]) + (gap * i), posY, (0, random.randint(0,255), 0))
-        blocks.append(blocki)
+    for idx, block_width in enumerate(block_widths):
+        block_i = block(20, block_width, GAP + INLINE_X + sum(block_widths[:idx]) + (GAP * idx), pos_y, (0, random.randint(0,255), 0))
+        blocks.append(block_i)
     
     return blocks
 
+# generate the rows of bricks
 all_blocks = []
-for i in range(5):
+for i in range(BRICK_ROWS):
     all_blocks += create_blocks(40 * (i + 1))
 
+# check for collisions, remove objects and change projectile direction accordingly
 def collision():
     global all_blocks, gm_pause
 
-    project_rect = pygame.Rect(projectile0.posX - projectile0.radius, projectile0.posY - projectile0.radius, projectile0.radius * 2, projectile0.radius * 2)
+    project_rect = pygame.Rect(bullet.pos_x - bullet.radius, bullet.pos_y - bullet.radius, bullet.radius * 2, bullet.radius * 2)
 
-    wall_bottom_rect = pygame.Rect(wall_bottom.posX, wall_bottom.posY, wall_bottom.width, wall_bottom.height)
+    wall_bottom_rect = pygame.Rect(wall_bottom.pos_x, wall_bottom.pos_y, wall_bottom.width, wall_bottom.height)
     if wall_bottom_rect.colliderect(project_rect):
         gm_pause = True
 
     for block in all_blocks:
-        block_rect = pygame.Rect(block.posX, block.posY, block.width, block.height)
-        if block_rect.colliderect(project_rect) and ((projectile0.posX < block.posX) or (projectile0.posX > block.posX + block.width)):
-            projectile0.speedX *= -1
+        block_rect = pygame.Rect(block.pos_x, block.pos_y, block.width, block.height)
+        if block_rect.colliderect(project_rect) and ((bullet.pos_x < block.pos_x) or (bullet.pos_x > block.pos_x + block.width)):
+            bullet.speed_x *= -1
             all_blocks.remove(block)
         elif block_rect.colliderect(project_rect):
-            projectile0.speedY *= -1
+            bullet.speed_y *= -1
             all_blocks.remove(block)
 
-    paddle_rect = pygame.Rect(paddle.posX, paddle.posY, paddle.width, paddle.height)
-    if paddle_rect.colliderect(project_rect) and ((projectile0.posX < paddle.posX) or (projectile0.posX > paddle.posX + paddle.width)):
-        projectile0.speedX *= -1
+    paddle_rect = pygame.Rect(paddle.pos_x, paddle.pos_y, paddle.width, paddle.height)
+    if paddle_rect.colliderect(project_rect) and ((bullet.pos_x < paddle.pos_x) or (bullet.pos_x > paddle.pos_x + paddle.width)):
+        bullet.speed_x *= -1
     elif paddle_rect.colliderect(project_rect):
-        projectile0.speedY *= -1
+        bullet.speed_y *= -1
