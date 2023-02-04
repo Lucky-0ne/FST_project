@@ -35,10 +35,10 @@ For this project I tried to follow the Style Guide (PEP 8) for Python Code, writ
 
 ### A)
   - [Indentation:](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/brickbreaker_main.py#L9-L11) Use either 4 spaces per indentation level or 1 tab BUT be consistent with whatever you choose. I prefer tabs even if spaces is the official recommended style.
-  - [Documentation Strings:](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_methods.py#L7) (a.k.a. "docstrings") For describing functions inlcuding their in- and outputs.
-  - [Self explanatory variable names:](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_classes.py#L7) The variable name itself helps in understanding the code.
-  - [Constants:](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_init.py#L9) All constants are written in capital letters with underscores seperating words.
-  - [D.R.Y.:](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_classes.py#L30) Try to keep your code "dry" (Don't Repeat Yourself!).
+  - [Documentation Strings:](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_methods.py#L7-#L15) (a.k.a. "docstrings") For describing functions inlcuding their in- and outputs.
+  - [Self explanatory variable names:](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_classes.py#L7-#L11) The variable name itself helps in understanding the code.
+  - [Constants:](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_init.py#L6-#L10) All constants are written in capital letters with underscores seperating words.
+  - [D.R.Y.:](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_classes.py#L30-#L31) Try to keep your code "dry" (Don't Repeat Yourself!).
 
 ### B)
 
