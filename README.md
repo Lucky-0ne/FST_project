@@ -41,6 +41,7 @@ For this project I tried to follow the Style Guide (PEP 8) for Python Code, writ
   - [D.R.Y.:](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_classes.py#L30-#L31) Try to keep your code "dry" (Don't Repeat Yourself!).
 
 ### B)
+ [My CCD-Cheat-Cheet](https://github.com/Lucky-0ne/FST_project/blob/main/CCD_Cheat_Cheat.pdf)
 
 ## 6. Build Management
 TBD
