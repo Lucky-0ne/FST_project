@@ -34,7 +34,7 @@ There were three UML diagramms created for this project. Each of them shall be a
 For this project I tried to follow the Style Guide (PEP 8) for Python Code, written by Guido van Rossum, Barry Warsaw and Nick Coghlan.
 
 ### A)
-  - [Indentation:](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/brickbreaker_main.py#L9) Use either 4 spaces per indentation level or 1 tab BUT be consistent with whatever you choose. I prefer tabs even if spaces is the official recommended style.
+  - [Indentation:](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/brickbreaker_main.py#L9-11) Use either 4 spaces per indentation level or 1 tab BUT be consistent with whatever you choose. I prefer tabs even if spaces is the official recommended style.
   - [Documentation Strings:](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_methods.py#L7) (a.k.a. "docstrings") For describing functions inlcuding their in- and outputs.
   - [Self explanatory variable names:](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_classes.py#L7) The variable name itself helps in understanding the code.
   - [Constants:](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_init.py#L9) All constants are written in capital letters with underscores seperating words.
