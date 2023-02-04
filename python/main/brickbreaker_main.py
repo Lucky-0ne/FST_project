@@ -1,5 +1,5 @@
 # # simple pygame program
-# import dependencies
+# first import dependencies
 from imports.brickbreaker_methods import *
 
 # run until the user asks to quit

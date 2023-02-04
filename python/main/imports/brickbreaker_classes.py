@@ -1,4 +1,4 @@
-# import dependencies
+# first import dependencies
 from imports.brickbreaker_init import *
 
 # class for blocks (used for the bricks in game)
@@ -27,15 +27,11 @@ class projectile:
         self.speed_y = speed_y
 
     def bewegen(self):
-        if self.pos_x < 12:
-            self.speed_x *= -1
-        elif self.pos_x > WN_WIDTH - 12:
+        if self.pos_x < 12 or self.pos_x > WN_WIDTH - 12:
             self.speed_x *= -1
         self.pos_x = self.pos_x + self.speed_x
 
-        if self.pos_y < 12:
-            self.speed_y *= -1
-        elif self.pos_y > WN_HEIGHT - 12:
+        if self.pos_y < 12 or self.pos_y > WN_HEIGHT - 12:
             self.speed_y *= -1
         self.pos_y = self.pos_y + self.speed_y
 

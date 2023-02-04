@@ -1,4 +1,4 @@
-# import dependencies
+# first import dependencies
 from imports.brickbreaker_classes import *
 
 # create game objects
