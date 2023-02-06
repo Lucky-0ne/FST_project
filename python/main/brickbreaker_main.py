@@ -1,10 +1,12 @@
 # # simple pygame program
 # first import dependencies
 from imports.brickbreaker_methods import *
+import time
 
-# run until the user asks to quit
+# run until the user asks to quit or the time runs up
 running = True
-while running:
+time_start = time.time()
+while running and (time.time() - time_start) < TIME_LIMIT:
     # check if the user clicked the window close button --> end while/program
     for event in pygame.event.get():
         if event.type == pygame.QUIT:

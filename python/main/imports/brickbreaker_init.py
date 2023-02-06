@@ -10,6 +10,7 @@ WN_WIDTH = 800
 INLINE_X = 8
 PADDLE_WIDTH = 60
 BRICK_ROWS = 7
+TIME_LIMIT = 3
 
 # initialize variables
 gm_pause = True
