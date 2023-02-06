@@ -1,6 +1,8 @@
 # Import and initialize the pygame library
+import os
 import pygame
 pygame.init()
+os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 # initialize constants
 WN_HEIGHT = 600
