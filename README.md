@@ -47,7 +47,7 @@ For this project I tried to follow the Style Guide (PEP 8) for Python Code, writ
 TBD
 
 ## 7. Unit-Tests
-TBD
+I wrote some basic unittests for my project program ([test_brickbreaker_main.py](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/test_brickbreaker_main.py)) and ran them via the testing extension from VS Code ([all passed](https://github.com/Lucky-0ne/FST_project/blob/main/images/unittests/unittests.png)).
 
 ## 8. Continuous Delivery
 For this project I set up a Docker-Container with Jenkins ([screenshot](https://github.com/Lucky-0ne/FST_project/blob/main/images/jenkins/Jenkins_DockerContainer.jpg)) and integrated my github repository/project as you can see [here](https://github.com/Lucky-0ne/FST_project/blob/main/images/jenkins/Jenkins_Status.jpg). Furthermore I inserted three script calls ([screenshot](https://github.com/Lucky-0ne/FST_project/blob/main/images/jenkins/Jenkins_ScriptCalls.jpg)).
