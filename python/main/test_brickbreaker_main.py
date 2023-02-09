@@ -27,5 +27,5 @@ class BrickbreakerTest(unittest.TestCase):
     def test_types(self):
         assert type(all_blocks) == list, "incorrect type"
 
-    def tearDown(self):
+    def test_quit(self):
         pygame.quit()
