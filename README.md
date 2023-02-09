@@ -74,4 +74,9 @@ I use **Visual Studio Code** as my IDE. It was the first IDE I got introduced to
 TBD
 
 ## 11. Functional Programming
-TBD
+
+- [only final data structures](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_classes.py#L7)
+- [(mostly) side effect free functions](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_methods.py#L6-#L33)
+- [the use of higher-order functions](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_methods.py#L38)
+- [functions as parameters and return values](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/imports/brickbreaker_methods.py#L52)
+- [use closures / anonymous functions](https://github.com/Lucky-0ne/FST_project/blob/main/python/project_unrelated/closure_example.py) - Hence I'm not sure if I used a closure in my code I stated an example outside of my project.
