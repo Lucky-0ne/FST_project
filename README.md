@@ -44,7 +44,7 @@ For this project I tried to follow the Style Guide (PEP 8) for Python Code, writ
  [My CCD-Cheat-Cheet](https://github.com/Lucky-0ne/FST_project/blob/main/CCD_Cheat_Cheat.pdf)
 
 ## 6. Build Management
-TBD
+I have never used a Build Management Tool before and therefore created a small [repository](https://github.com/Lucky-0ne/FST_project/tree/main/python/project_unrelated/pybuilder/helloworld) disconnected from my project to try out and learn the build tool "pybuilder". I wrote a short [script](https://github.com/Lucky-0ne/FST_project/blob/main/python/project_unrelated/pybuilder/helloworld/src/main/python/helloworld.py) and [test-file](https://github.com/Lucky-0ne/FST_project/blob/main/python/project_unrelated/pybuilder/helloworld/src/unittest/python/helloworld_tests.py) to build with pybuilder. [Here](https://github.com/Lucky-0ne/FST_project/blob/main/images/buildtool/terminal_build_successful.jpg) you can see the successful build and [here](https://github.com/Lucky-0ne/FST_project/tree/main/python/project_unrelated/pybuilder/helloworld/target) you can have a look at the code yourself. Pybuilder was recommended to me by colleagues and seemed as if it would be ideal for my python expertise.
 
 ## 7. Unit-Tests
 I wrote some basic Unit-Tests for my project program ([test_brickbreaker_main.py](https://github.com/Lucky-0ne/FST_project/blob/main/python/main/test_brickbreaker_main.py)) and ran them via the testing extension from VS Code ([all passed](https://github.com/Lucky-0ne/FST_project/blob/main/images/unittests/unittests.png)) and Jenkins (see 8. *Continous Delivery*).
