@@ -1,1 +1,4 @@
 pygame==2.1.2
+helloworld==0.1.dev0  
+mockito==1.4.0
+pybuilder==0.13.8
