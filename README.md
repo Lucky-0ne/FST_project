@@ -71,7 +71,7 @@ I use **Visual Studio Code** as my IDE. It was the first IDE I got introduced to
 - ```strg + y```                    &rarr; redo
 
 ## 10. DSL
-I created a project-unrelated Domain Specific Language (DSL). Its purpose is to read the [.dsl file](https://github.com/Lucky-0ne/FST_project/blob/main/python/project_unrelated/appointments.dsl) and to parse its contents as appointments, printed out for the user ([dsl_example.py](https://github.com/Lucky-0ne/FST_project/blob/main/python/project_unrelated/dsl_example.py)).
+I created a project-unrelated Domain Specific Language (DSL). Its purpose is to read the [.dsl file](https://github.com/Lucky-0ne/FST_project/blob/main/python/project_unrelated/appointments.dsl) and to [parse](https://github.com/Lucky-0ne/FST_project/blob/main/python/project_unrelated/dsl_example.py) its contents as appointments, [printed out](https://github.com/Lucky-0ne/FST_project/blob/main/images/dsl.jpg) for the user.
 
 ## 11. Functional Programming
 
