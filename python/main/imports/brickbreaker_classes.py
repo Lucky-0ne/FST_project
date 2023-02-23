@@ -3,12 +3,29 @@ from imports.brickbreaker_init import *
 
 # class for blocks (used for the bricks in game)
 class block:
-    def __init__(self, height, width, pos_x, pos_y, colour):
+    def __init__(self, height, width, pos_x, pos_y, colour, life=2):
         self.height = height
         self.width = width
         self.pos_x = pos_x
         self.pos_y = pos_y
         self.colour = colour
+        self.life = life
+    
+    def draws(self):
+        pygame.draw.rect(screen, self.colour, ((self.pos_x, self.pos_y), (self.width, self.height)))
+
+    def move(self, speed):
+        self.pos_x += speed
+
+# class for the paddle
+class paddles:
+    def __init__(self, height, width, pos_x, pos_y, colour, speed):
+        self.height = height
+        self.width = width
+        self.pos_x = pos_x
+        self.pos_y = pos_y
+        self.colour = colour
+        self.speed = speed
     
     def draws(self):
         pygame.draw.rect(screen, self.colour, ((self.pos_x, self.pos_y), (self.width, self.height)))

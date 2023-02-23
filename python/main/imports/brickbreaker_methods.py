@@ -1,6 +1,5 @@
 # import dependencies and the random module (for random block position with each restart)
 from imports.brickbreaker_objects import *
-import random
 
 # method for calculating a random brick-position with varying brick sizes for each game start
 def create_blocks(pos_y):
@@ -27,7 +26,9 @@ def create_blocks(pos_y):
 
     blocks = []
     for idx, block_width in enumerate(block_widths):
-        block_i = block(20, block_width, GAP + INLINE_X + sum(block_widths[:idx]) + (GAP * idx), pos_y, (0, random.randint(0,255), 0))
+        block_rng = random.randint(0,255)
+        life = 1 + int((255 - block_rng) / 100)
+        block_i = block(20, block_width, GAP + INLINE_X + sum(block_widths[:idx]) + (GAP * idx), pos_y, (0, block_rng, 0), life)
         blocks.append(block_i)
     
     return blocks
@@ -39,25 +40,47 @@ for i in range(BRICK_ROWS):
 
 # check for collisions, remove objects and change projectile direction accordingly
 def collision():
-    global all_blocks, gm_pause
+    global all_blocks
 
-    project_rect = pygame.Rect(bullet.pos_x - bullet.radius, bullet.pos_y - bullet.radius, bullet.radius * 2, bullet.radius * 2)
-
-    wall_bottom_rect = pygame.Rect(wall_bottom.pos_x, wall_bottom.pos_y, wall_bottom.width, wall_bottom.height)
-    if wall_bottom_rect.colliderect(project_rect):
-        gm_pause = True
+    projectile_hitbox = pygame.Rect(bullet.pos_x - bullet.radius, bullet.pos_y - bullet.radius, bullet.radius * 2, bullet.radius * 2)
 
     for block in all_blocks:
         block_rect = pygame.Rect(block.pos_x, block.pos_y, block.width, block.height)
-        if block_rect.colliderect(project_rect) and ((bullet.pos_x < block.pos_x) or (bullet.pos_x > block.pos_x + block.width)):
+        if block_rect.colliderect(projectile_hitbox) and ((bullet.pos_x < block.pos_x) or (bullet.pos_x > block.pos_x + block.width)):
             bullet.speed_x *= -1
-            all_blocks.remove(block)
-        elif block_rect.colliderect(project_rect):
+            if block.life <= 1:
+                block.life -= 1
+                if np.abs(bullet.speed_x) < SPEED_CAP:
+                    paddle.speed *= 1.1
+                    bullet.speed_x *= 1.1
+                    bullet.speed_y *= 1.1
+                all_blocks.remove(block)
+            else:
+                block.life -= 1
+        elif block_rect.colliderect(projectile_hitbox):
             bullet.speed_y *= -1
-            all_blocks.remove(block)
+            if block.life <= 1:
+                block.life -= 1
+                if np.abs(bullet.speed_x) < SPEED_CAP:
+                    paddle.speed *= 1.1
+                    bullet.speed_x *= 1.1
+                    bullet.speed_y *= 1.1
+                all_blocks.remove(block)
+            else:
+                block.life -= 1
 
     paddle_rect = pygame.Rect(paddle.pos_x, paddle.pos_y, paddle.width, paddle.height)
-    if paddle_rect.colliderect(project_rect) and ((bullet.pos_x < paddle.pos_x) or (bullet.pos_x > paddle.pos_x + paddle.width)):
+    if paddle_rect.colliderect(projectile_hitbox) and ((bullet.pos_x < paddle.pos_x) or (bullet.pos_x > paddle.pos_x + paddle.width)):
         bullet.speed_x *= -1
-    elif paddle_rect.colliderect(project_rect):
+    elif paddle_rect.colliderect(projectile_hitbox):
         bullet.speed_y *= -1
+
+def hit(gm_pause):
+    projectile_hitbox = pygame.Rect(bullet.pos_x - bullet.radius, bullet.pos_y - bullet.radius, bullet.radius * 2, bullet.radius * 2)
+    wall_bottom_rect = pygame.Rect(wall_bottom.pos_x, wall_bottom.pos_y, wall_bottom.width, wall_bottom.height)
+    if wall_bottom_rect.colliderect(projectile_hitbox):
+        gm_pause = True
+
+        return gm_pause
+    
+    return gm_pause
