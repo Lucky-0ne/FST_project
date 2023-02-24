@@ -15,8 +15,10 @@ PADDLE_WIDTH = 60
 BRICK_ROWS = 7
 BULLET_SPEED = (3, 2)
 PADDLE_SPEED = 4
+LVL_INCREMENT = 0.1
 SPEED_CAP = 5
-TEXT_FONT = pygame.font.SysFont("Comic Sans MS", 15)
+TEXT_FONT = pygame.font.SysFont("Arial Black", 15)
+START_POS_PADDLE = (WN_WIDTH / 2) - (PADDLE_WIDTH / 2)
 
 # initialize variables
 gm_pause = True

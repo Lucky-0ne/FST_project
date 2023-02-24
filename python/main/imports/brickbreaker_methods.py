@@ -44,30 +44,25 @@ def collision():
 
     projectile_hitbox = pygame.Rect(bullet.pos_x - bullet.radius, bullet.pos_y - bullet.radius, bullet.radius * 2, bullet.radius * 2)
 
+    def brick_destruction_event():
+        if block.life <= 1:
+            block.life -= 1
+            if np.abs(bullet.speed_x) < SPEED_CAP and (len(all_blocks) % 4) == 0:
+                paddle.speed += PADDLE_SPEED * LVL_INCREMENT * (paddle.speed / np.abs(paddle.speed))
+                bullet.speed_x += (BULLET_SPEED[0] * LVL_INCREMENT) * (bullet.speed_x / np.abs(bullet.speed_x))
+                bullet.speed_y += BULLET_SPEED[1] * LVL_INCREMENT * (bullet.speed_y / np.abs(bullet.speed_y))
+            all_blocks.remove(block)
+        else:
+            block.life -= 1
+
     for block in all_blocks:
         block_rect = pygame.Rect(block.pos_x, block.pos_y, block.width, block.height)
         if block_rect.colliderect(projectile_hitbox) and ((bullet.pos_x < block.pos_x) or (bullet.pos_x > block.pos_x + block.width)):
             bullet.speed_x *= -1
-            if block.life <= 1:
-                block.life -= 1
-                if np.abs(bullet.speed_x) < SPEED_CAP:
-                    paddle.speed *= 1.1
-                    bullet.speed_x *= 1.1
-                    bullet.speed_y *= 1.1
-                all_blocks.remove(block)
-            else:
-                block.life -= 1
+            brick_destruction_event()
         elif block_rect.colliderect(projectile_hitbox):
             bullet.speed_y *= -1
-            if block.life <= 1:
-                block.life -= 1
-                if np.abs(bullet.speed_x) < SPEED_CAP:
-                    paddle.speed *= 1.1
-                    bullet.speed_x *= 1.1
-                    bullet.speed_y *= 1.1
-                all_blocks.remove(block)
-            else:
-                block.life -= 1
+            brick_destruction_event()
 
     paddle_rect = pygame.Rect(paddle.pos_x, paddle.pos_y, paddle.width, paddle.height)
     if paddle_rect.colliderect(projectile_hitbox) and ((bullet.pos_x < paddle.pos_x) or (bullet.pos_x > paddle.pos_x + paddle.width)):

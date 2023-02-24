@@ -4,7 +4,7 @@ from imports.brickbreaker_classes import *
 # create game objects
 bullet = projectile(400, 500, 5, (0, 0, 255), BULLET_SPEED[0], BULLET_SPEED[1])
 
-paddle = paddles(10, PADDLE_WIDTH, WN_WIDTH / 2 + 30, WN_HEIGHT - 25, (100, 0, 100), PADDLE_SPEED)
+paddle = paddles(10, PADDLE_WIDTH, START_POS_PADDLE, WN_HEIGHT - 25, (100, 0, 100), PADDLE_SPEED)
 
 wall_left = block(WN_HEIGHT - 10, 3, 5, 5, (0, 0, 0))
 wall_right = block(WN_HEIGHT - 10, 3, WN_WIDTH - INLINE_X, 5, (0, 0, 0))

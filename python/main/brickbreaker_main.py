@@ -18,9 +18,9 @@ while running:
     # draw bricks, walls, the projectile and paddle
     for block_i in all_blocks:
         block_i.draws()
-        
-        text_surface = TEXT_FONT.render(f"{block_i.life}", False, (255, 255, 255))
-        screen.blit(text_surface, (block_i.pos_x + (block_i.width / 2), block_i.pos_y))
+        # print each bricks life
+        txt_surface_blocks = TEXT_FONT.render(f"{block_i.life}", False, (255, 255, 255))
+        screen.blit(txt_surface_blocks, (block_i.pos_x + (block_i.width / 2), block_i.pos_y))
 
     for wall in walls:
         wall.draws()
@@ -45,6 +45,7 @@ while running:
         bullet.pos_y = 2 / 3 * WN_HEIGHT
         bullet.speed_x = 0
         bullet.speed_y = 0
+        paddle.pos_x = START_POS_PADDLE
         if pressed[pygame.K_SPACE]:
             bullet.speed_x = BULLET_SPEED[0] * [-1,1][random.randint(0,1)]
             bullet.speed_y = BULLET_SPEED[1]
@@ -53,6 +54,14 @@ while running:
 
     # check collisions
     collision()
+
+    # show difficulty (speed) on screen
+    if np.abs(bullet.speed_x) > SPEED_CAP:
+        difficulty = "MAX."
+    else:
+        difficulty = round(np.abs(bullet.speed_x),1)
+    txt_surface_speed = TEXT_FONT.render(f"Difficulty: {difficulty}", False, (0, 0, 0))
+    screen.blit(txt_surface_speed, (18, 14))
 
     # set tick rate
     clock.tick(60)
