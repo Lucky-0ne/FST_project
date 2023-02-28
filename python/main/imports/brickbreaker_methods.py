@@ -26,9 +26,9 @@ def create_blocks(pos_y):
 
     blocks = []
     for idx, block_width in enumerate(block_widths):
-        block_rng = random.randint(0,255)
-        life = 1 + int((255 - block_rng) / 100)
-        block_i = block(20, block_width, GAP + INLINE_X + sum(block_widths[:idx]) + (GAP * idx), pos_y, (0, block_rng, 0), life)
+        life = random.randint(1, BLOCK_LIFE_MAX)
+        clr = 255 - int(255 * life / BLOCK_LIFE_MAX)
+        block_i = block(20, block_width, GAP + INLINE_X + sum(block_widths[:idx]) + (GAP * idx), pos_y, (0, clr, 0), life)
         blocks.append(block_i)
     
     return blocks
@@ -54,6 +54,7 @@ def collision():
             all_blocks.remove(block)
         else:
             block.life -= 1
+            block.colour = (0, 255 - int(255 * block.life / BLOCK_LIFE_MAX), 0)
 
     for block in all_blocks:
         block_rect = pygame.Rect(block.pos_x, block.pos_y, block.width, block.height)

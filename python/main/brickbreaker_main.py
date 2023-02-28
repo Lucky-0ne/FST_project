@@ -18,9 +18,6 @@ while running:
     # draw bricks, walls, the projectile and paddle
     for block_i in all_blocks:
         block_i.draws()
-        # print each bricks life
-        txt_surface_blocks = TEXT_FONT.render(f"{block_i.life}", False, (255, 255, 255))
-        screen.blit(txt_surface_blocks, (block_i.pos_x + (block_i.width / 2), block_i.pos_y))
 
     for wall in walls:
         wall.draws()
