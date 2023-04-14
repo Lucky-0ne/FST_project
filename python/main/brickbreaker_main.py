@@ -15,9 +15,6 @@ while running:
     # white background
     screen.fill((255, 255, 255))
 
-    # draw bricks, walls, the projectile and paddle
-    for block_i in all_blocks:
-        block_i.draws()
 
     for wall in walls:
         wall.draws()
@@ -38,6 +35,10 @@ while running:
 
     # check if game is paused, position the projectile and start game if space-key is pressed
     if gm_pause:
+        # draw bricks, walls, the projectile and paddle
+        all_blocks = create_all_bricks()
+        for block_i in all_blocks:
+            block_i.draws()
         bullet.pos_x = WN_WIDTH / 2
         bullet.pos_y = 2 / 3 * WN_HEIGHT
         bullet.speed_x = 0
@@ -48,9 +49,12 @@ while running:
             bullet.speed_y = BULLET_SPEED[1]
             paddle.speed = PADDLE_SPEED
             gm_pause = False
-
-    # check collisions
-    collision()
+    else:
+        # draw bricks, walls, the projectile and paddle
+        for block_i in all_blocks:
+            block_i.draws()
+        # check collisions
+        collision(all_blocks)
 
     # show difficulty (speed) on screen
     if np.abs(bullet.speed_x) > SPEED_CAP:

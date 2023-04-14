@@ -8,8 +8,8 @@ pygame.font.init()
 os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 # initialize constants
-WN_HEIGHT = 600
-WN_WIDTH = 800
+WN_HEIGHT = 600 * 1.2
+WN_WIDTH = 800 * 1.2
 INLINE_X = 8
 PADDLE_WIDTH = 60
 BRICK_ROWS = 7

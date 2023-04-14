@@ -2,7 +2,7 @@
 from imports.brickbreaker_objects import *
 
 # method for calculating a random brick-position with varying brick sizes for each game start
-def create_blocks(pos_y):
+def create_block_row(pos_y):
     '''
     Calculates a random brick-position with varying brick sizes for each game start.
 
@@ -34,13 +34,18 @@ def create_blocks(pos_y):
     return blocks
 
 # generate the rows of bricks
-all_blocks = []
-for i in range(BRICK_ROWS):
-    all_blocks += create_blocks(40 * (i + 1))
+def create_all_bricks(BRICK_ROWS=BRICK_ROWS):
+    all_blocks = []
+    for i in range(BRICK_ROWS):
+        all_blocks += create_block_row(40 * (i + 1))
+
+    return all_blocks
+
+# block_pool
+# all_blocks = create_all_bricks()
 
 # check for collisions, remove objects and change projectile direction accordingly
-def collision():
-    global all_blocks
+def collision(all_blocks):
 
     projectile_hitbox = pygame.Rect(bullet.pos_x - bullet.radius, bullet.pos_y - bullet.radius, bullet.radius * 2, bullet.radius * 2)
 
